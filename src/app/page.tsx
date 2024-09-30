@@ -10,7 +10,17 @@ export default function Home() {
   return (
     <Container>
       <First>
-        <Image src="/image/me.png" alt="me" width={160} height={160} />
+        <div className="heart one">❤️</div>
+        <div className="heart two">❤️</div>
+        <div className="heart three">❤️</div>
+        <div className="heart four">❤️</div>
+        <Image
+          src="/image/me.png"
+          alt="me"
+          width={160}
+          height={160}
+          className="me"
+        />
         <RightSection>
           <span className="name">JIWON</span>
           <span className="intro">어쩌고 저쩌고 소개입니다.</span>
@@ -53,7 +63,10 @@ export default function Home() {
       </First>
 
       <Archives>
-        <div className="title">Archives</div>
+        <div className="archive">Archives</div>
+        <Category>
+          <div className="category">Category</div>
+        </Category>
       </Archives>
     </Container>
   );
@@ -115,12 +128,58 @@ const Resume = styled.div`
 
 const First = styled.div`
   display: flex;
+  position: relative;
+
+  .me {
+    margin-right: 20px;
+  }
+
+  .heart {
+    position: absolute;
+    opacity: 0;
+    transition: 0.2s all ease-in-out;
+  }
+
+  &:hover {
+    .heart {
+      opacity: 1;
+    }
+  }
+
+  .one {
+    transform: rotate(23deg);
+    top: 20px;
+    left: 130px;
+  }
+  .two {
+    transform: rotate(-23deg);
+    top: 20px;
+    left: 20px;
+  }
+  .three {
+    transform: rotate(10deg);
+    top: -3px;
+    left: 110px;
+  }
+  .four {
+    transform: rotate(-15deg);
+    top: -3px;
+    left: 35px;
+  }
 `;
 
 const Archives = styled.div`
   padding: 100px 40px;
-  .title {
+  .archive {
     font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 100px;
+  }
+`;
+
+const Category = styled.div`
+  .category {
+    font-size: 30px;
     font-weight: bold;
   }
 `;
