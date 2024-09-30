@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "@/styles/GlobalStyle";
 import { darkTheme, lightTheme } from "@/styles/theme";
-import Header from "./Header/Hedaer";
+import Header from "./Header/Header";
 
 const RootContainer = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState(() => {
