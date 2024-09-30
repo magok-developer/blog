@@ -35,5 +35,5 @@ const RootContainer = ({ children }: { children: React.ReactNode }) => {
 export default RootContainer;
 
 const Body = styled.div`
-  padding: 100px 200px;
+  padding: 150px 20rem;
 `;

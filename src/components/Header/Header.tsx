@@ -18,9 +18,7 @@ const Header = ({ onClick, isChecked }: Props) => {
       </LeftSection>
       <RightSection>
         <LinkWrap>
-          <a href="https://github.com/magok-developer" target="_blank">
-            Blog
-          </a>
+          <a href="/blog">Blog</a>
 
           <a href="https://velog.io/@jwha/posts" target="_blank">
             Portfolio
@@ -44,7 +42,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 250px;
+  padding: 50px 22rem;
 `;
 
 const LeftSection = styled.div`
