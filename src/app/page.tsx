@@ -1,11 +1,13 @@
 "use client";
 
+import Tooltip from "@/components/Tooltip/Tooltip";
 import Image from "next/image";
 import Link from "next/link";
 import styled, { useTheme } from "styled-components";
 
 export default function Home() {
   const theme = useTheme();
+
   return (
     <Container>
       <First>
@@ -14,10 +16,11 @@ export default function Home() {
         <div className="heart three">❤️</div>
         <div className="heart four">❤️</div>
         <Image
-          src={`image/me.png`} // 절대 경로 수정
+          src="image/me.png"
           alt="me"
           width={160}
           height={160}
+          className="me"
         />
         <RightSection>
           <span className="name">JIWON</span>
@@ -26,12 +29,17 @@ export default function Home() {
             <Git>
               <Link href="https://github.com/magok-developer" target="_blank">
                 <Image
-                  src={`${process.env.assetPrefix}${theme.icons.github}`} // 경로 수정
+                  src={theme.icons.github}
                   alt="git"
                   width={22}
                   height={22}
                 />
               </Link>
+              <Tooltip
+                text="GitHub"
+                className="git"
+                style={{ left: "-10px" }}
+              />
             </Git>
             <Resume>
               <Link
@@ -39,12 +47,17 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  src={`${process.env.assetPrefix}${theme.icons.resume}`} // 경로 수정
+                  src={theme.icons.resume}
                   alt="resume"
                   width={22}
                   height={22}
                 />
               </Link>
+              <Tooltip
+                text="resume"
+                className="resume"
+                style={{ left: "-13px" }}
+              />
             </Resume>
           </IconWrap>
         </RightSection>
