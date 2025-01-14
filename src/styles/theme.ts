@@ -14,8 +14,8 @@ export const lightTheme: Theme = {
   background: "#EDEDE9",
   fontColor: "#1D1B1B",
   icons: {
-    github: "/icons/github-black.svg",
-    resume: "/icons/resume-black.svg",
+    github: "icons/github-black.svg",
+    resume: "icons/resume-black.svg",
   },
 };
 
@@ -23,8 +23,8 @@ export const darkTheme: Theme = {
   background: "#1D1B1B",
   fontColor: "#FFFFFF",
   icons: {
-    github: "/icons/github.svg",
-    resume: "/icons/resume.svg",
+    github: "icons/github.svg",
+    resume: "icons/resume.svg",
   },
 };
 

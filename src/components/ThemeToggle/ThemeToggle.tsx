@@ -12,7 +12,7 @@ const ThemeToggle = ({ onClick, isChecked }: Props) => {
     <>
       {isChecked ? (
         <Image
-          src="/icons/dark.svg"
+          src="icons/dark.svg"
           alt="dark"
           width={20}
           height={20}
@@ -21,7 +21,7 @@ const ThemeToggle = ({ onClick, isChecked }: Props) => {
         />
       ) : (
         <Image
-          src="/icons/light.svg"
+          src="icons/light.svg"
           alt="dark"
           width={20}
           height={20}

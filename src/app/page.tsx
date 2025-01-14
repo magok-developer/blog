@@ -8,6 +8,8 @@ import styled, { useTheme } from "styled-components";
 export default function Home() {
   const theme = useTheme();
 
+  console.log(theme.icons.github);
+
   return (
     <Container>
       <First>
