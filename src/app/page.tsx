@@ -1,65 +1,15 @@
 "use client";
 
-import Tooltip from "@/components/Tooltip/Tooltip";
-import Image from "next/image";
-import Link from "next/link";
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 
 export default function Home() {
-  const theme = useTheme();
-
   return (
     <Container>
       <First>
-        <div className="heart one">❤️</div>
-        <div className="heart two">❤️</div>
-        <div className="heart three">❤️</div>
-        <div className="heart four">❤️</div>
-        <Image
-          src="image/me.png"
-          alt="me"
-          width={160}
-          height={160}
-          className="me"
-        />
         <RightSection>
           <span className="name">JIWON</span>
           <span className="intro">어쩌고 저쩌고 소개입니다.</span>
-          <IconWrap>
-            <Git>
-              <Link href="https://github.com/magok-developer" target="_blank">
-                <Image
-                  src={theme.icons.github}
-                  alt="git"
-                  width={22}
-                  height={22}
-                />
-              </Link>
-              <Tooltip
-                text="GitHub"
-                className="git"
-                style={{ left: "-10px" }}
-              />
-            </Git>
-            <Resume>
-              <Link
-                href="https://giddy-product-b00.notion.site/1248f4226cca4b8aaf0d694951985aad"
-                target="_blank"
-              >
-                <Image
-                  src={theme.icons.resume}
-                  alt="resume"
-                  width={22}
-                  height={22}
-                />
-              </Link>
-              <Tooltip
-                text="resume"
-                className="resume"
-                style={{ left: "-13px" }}
-              />
-            </Resume>
-          </IconWrap>
+          <IconWrap></IconWrap>
         </RightSection>
       </First>
 
@@ -106,24 +56,6 @@ const IconWrap = styled.div`
 
   .resume {
     opacity: 0;
-  }
-`;
-
-const Git = styled.div`
-  position: relative;
-  &:hover {
-    .git {
-      opacity: 1;
-    }
-  }
-`;
-
-const Resume = styled.div`
-  position: relative;
-  &:hover {
-    .resume {
-      opacity: 1;
-    }
   }
 `;
 

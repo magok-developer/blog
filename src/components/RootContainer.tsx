@@ -5,9 +5,13 @@ import styled, { ThemeProvider } from "styled-components";
 import GlobalStyle from "@/styles/GlobalStyle";
 import { darkTheme, lightTheme } from "@/styles/theme";
 import Header from "./Header/Header";
+import LeftSideBar from "./SideBar/LeftSideBar";
+import RightSideBar from "./SideBar/RightSideBar";
+import { usePathname } from "next/navigation";
 
 const RootContainer = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState(darkTheme); // 기본값은 darkTheme으로 설정
+  const [theme, setTheme] = useState(darkTheme);
+  const path = usePathname();
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -36,7 +40,17 @@ const RootContainer = ({ children }: { children: React.ReactNode }) => {
     <ThemeProvider theme={theme}>
       <GlobalStyle theme={theme} />
       <Header onClick={toggleTheme} isChecked={theme === lightTheme} />
-      <Body>{children}</Body>
+      <Body>
+        {path !== "/about" ? (
+          <ContentContainer>
+            <LeftSideBar />
+            {children}
+            <RightSideBar />
+          </ContentContainer>
+        ) : (
+          <div>{children}</div>
+        )}
+      </Body>
     </ThemeProvider>
   );
 };
@@ -44,5 +58,14 @@ const RootContainer = ({ children }: { children: React.ReactNode }) => {
 export default RootContainer;
 
 const Body = styled.div`
-  padding: 150px 20rem;
+  padding: 150px 5rem 50px 5rem;
+  width: 100%;
+`;
+
+const ContentContainer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 230px 1fr 100px;
+  justify-content: center;
+  gap: 50px;
 `;

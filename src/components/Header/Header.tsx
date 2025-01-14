@@ -1,9 +1,10 @@
 "use client";
 
 import { mainColor } from "@/styles/theme";
-import styled from "styled-components";
+import styled, { useTheme } from "styled-components";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   onClick: () => void;
@@ -11,6 +12,7 @@ type Props = {
 };
 
 const Header = ({ onClick, isChecked }: Props) => {
+  const theme = useTheme();
   return (
     <Container>
       <LeftSection>
@@ -18,13 +20,26 @@ const Header = ({ onClick, isChecked }: Props) => {
       </LeftSection>
       <RightSection>
         <LinkWrap>
-          <a href="https://velog.io/@jwha/posts" target="_blank">
-            Blog
+          <Link
+            href="https://github.com/magok-developer"
+            target="_blank"
+            className="github"
+          >
+            <Image src={theme.icons.github} alt="git" width={20} height={20} />
+          </Link>
+
+          <a
+            href="https://giddy-product-b00.notion.site/1248f4226cca4b8aaf0d694951985aad"
+            target="_blank"
+          >
+            Resume
           </a>
 
           <a href="https://velog.io/@jwha/posts" target="_blank">
             Portfolio
           </a>
+
+          <a href="/about">About</a>
         </LinkWrap>
         <ThemeToggle onClick={onClick} isChecked={isChecked} />
       </RightSection>
@@ -44,7 +59,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 22rem;
+  padding: 30px 5rem 20px 5rem;
 `;
 
 const LeftSection = styled.div`
@@ -59,10 +74,14 @@ const RightSection = styled.div`
 
 const LinkWrap = styled.div`
   display: flex;
+  align-items: center;
   gap: 30px;
   font-weight: bold;
   font-size: 0.8em;
 
+  .github {
+    display: flex;
+  }
   a {
     position: relative;
     text-align: center;
