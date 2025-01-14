@@ -1,6 +1,5 @@
 "use client";
 
-import Tooltip from "@/components/Tooltip/Tooltip";
 import Image from "next/image";
 import Link from "next/link";
 import styled, { useTheme } from "styled-components";
@@ -15,7 +14,7 @@ export default function Home() {
         <div className="heart three">❤️</div>
         <div className="heart four">❤️</div>
         <Image
-          src={`${process.env.assetPrefix}/image/me.png`}
+          src={`${process.env.assetPrefix}/image/me.png`} // 경로 수정
           alt="me"
           width={160}
           height={160}
@@ -28,17 +27,12 @@ export default function Home() {
             <Git>
               <Link href="https://github.com/magok-developer" target="_blank">
                 <Image
-                  src={theme.icons.github}
+                  src={`${process.env.assetPrefix}${theme.icons.github}`} // 경로 수정
                   alt="git"
                   width={22}
                   height={22}
                 />
               </Link>
-              <Tooltip
-                text="GitHub"
-                className="git"
-                style={{ left: "-10px" }}
-              />
             </Git>
             <Resume>
               <Link
@@ -46,17 +40,12 @@ export default function Home() {
                 target="_blank"
               >
                 <Image
-                  src={theme.icons.resume}
+                  src={`${process.env.assetPrefix}${theme.icons.resume}`} // 경로 수정
                   alt="resume"
                   width={22}
                   height={22}
                 />
               </Link>
-              <Tooltip
-                text="resume"
-                className="resume"
-                style={{ left: "-13px" }}
-              />
             </Resume>
           </IconWrap>
         </RightSection>
