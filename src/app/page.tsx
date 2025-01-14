@@ -15,7 +15,7 @@ export default function Home() {
         <div className="heart three">❤️</div>
         <div className="heart four">❤️</div>
         <Image
-          src="/image/me.png"
+          src={`${process.env.assetPrefix}/image/me.png`}
           alt="me"
           width={160}
           height={160}
