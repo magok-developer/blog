@@ -30,7 +30,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  padding: 12px;
+  padding: 20px 12px;
   background-color: ${mainColor.lightGray};
   border-radius: 8px;
 `;

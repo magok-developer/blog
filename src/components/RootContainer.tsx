@@ -65,7 +65,7 @@ const Body = styled.div`
 const ContentContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: 230px 1fr 100px;
+  grid-template-columns: 230px 1fr 200px;
   justify-content: center;
-  gap: 50px;
+  gap: 20px;
 `;
