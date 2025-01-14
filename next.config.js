@@ -7,6 +7,9 @@ const prefix =
 const nextConfig = {
   output: "export",
   assetPrefix: prefix,
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;

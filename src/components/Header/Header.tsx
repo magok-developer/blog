@@ -18,7 +18,9 @@ const Header = ({ onClick, isChecked }: Props) => {
       </LeftSection>
       <RightSection>
         <LinkWrap>
-          <a href="/blog">Blog</a>
+          <a href="https://velog.io/@jwha/posts" target="_blank">
+            Blog
+          </a>
 
           <a href="https://velog.io/@jwha/posts" target="_blank">
             Portfolio
