@@ -7,7 +7,7 @@ const prefix =
 const nextConfig = {
   output: "export",
   assetPrefix: prefix,
-  basePath: prefix, // basePath 추가
+  basePath: "https://magok-developer.github.io", // basePath 추가
   images: {
     unoptimized: true, // 이미지 최적화 비활성화 (GitHub Pages에서 최적화 기능 미지원)
   },
