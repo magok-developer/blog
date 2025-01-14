@@ -14,11 +14,10 @@ export default function Home() {
         <div className="heart three">❤️</div>
         <div className="heart four">❤️</div>
         <Image
-          src={`${process.env.assetPrefix}/image/me.png`} // 경로 수정
+          src={`${process.env.assetPrefix}/image/me.png`} // 절대 경로 수정
           alt="me"
           width={160}
           height={160}
-          className="me"
         />
         <RightSection>
           <span className="name">JIWON</span>
